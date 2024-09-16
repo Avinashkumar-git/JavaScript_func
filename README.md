@@ -5149,3 +5149,170 @@ The condition within the `if` statement checks whether the value of `!typeof ran
 
 </p>
 </details>
+
+
+---
+
+###### 155. What's the output?
+
+```javascript
+const circle = {
+  radius: 20,
+  diameter() {
+    return this.radius * 2;
+  },
+  perimeter: () => 2 * Math.PI * this.radius,
+};
+
+
+console.log(circle.diameter());  =40
+console.log(circle.perimeter()); = NaN
+
+
+
+-----------------------------------------------------------------------------------------------
+
+
+var a =10
+a = 25
+console.log(a)
+ 
+let b = 25
+b = 20
+console.log(b)
+ 
+const c = {name:"avinash",place:"bangalore"}
+c.place = "karnataka"
+
+Console.log("", c)
+-----------------------------------------------------------------------------------------------------------
+
+var a = {
+  name :"react",
+  orgin:"facebook"
+}
+ 
+function check(a){
+    console.log(a.name)
+    a.name = "javascript"
+}
+
+console.log(a.name)
+-----------------------------------------------------------------------------------------
+
+
+var a = 10;
+if (function abc(){})
+{
+a += typeof abc;
+}
+console.log(a);
+------------------------------------------------------------------------------------------------------------
+
+console.log(null === undefined)   => false
+--------------------------------------------------------------------------------------------------------
+
+var a = 1;
+
+function test(){
+console.log(a)
+
+var a = 2;
+
+console.log(a)
+}
+
+test()
+
+console.log(a)
+
+=>   undefined--,  2-----, 1
+
+
+---------------------------------------------------------------------------------------------------------------
+
+var a = 1;
+
+function test(){
+console.log(a)
+
+let a = 2;
+
+console.log(a)
+}
+
+test()
+
+console.log(a)
+
+=>  can not redeclare variable with let or const
+
+
+--------------------------------------------------------------------------------------------------------------------
+function test(){
+return new Promise((resolve, reject)=>{
+	setTimeout(()=>{
+  resolve(2)
+  },1)
+})
+}
+
+async function  datatest(){
+console.log("test")
+ let b = await test();
+ 
+ console.log(b)
+ console.log("test222")
+}
+
+datatest();
+
+console.log("3333333")
+
+=>  test---> "33333333"-->2--------->test222
+
+-----------------------------------------------------------------------------------------------------------------
+const obj = {
+data:"name",
+test: ()=>{
+  console.log(this === window)   -->  true
+}
+}
+
+
+
+obj.test()
+===========> pointing to global object
+
+--------------------------------------------------------------------------------------------------------------
+
+const obj = {
+data:"name",
+test: function(){
+  console.log(this === window)    ===> false
+}
+}
+
+obj.test();
+
+=================> pointing to current object
+------------------------------------------------------------------------------------------------------------------------------
+
+function newtest(){
+
+function test(){
+ data = "222"
+}
+test()
+console.log(data)
+}
+
+newtest()
+
+console.log(data)
+-----------------------------------------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/e459d210-10b6-4892-af76-89338b03c4e5)
+
+```
+
+
